@@ -77,6 +77,8 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid #fff;
-  animation: typing 3s steps(20, end), blink 0.75s step-end infinite;
+  animation: typing 3s steps(20, end) , blink 0.75s step-end infinite;
 }
+
+
 

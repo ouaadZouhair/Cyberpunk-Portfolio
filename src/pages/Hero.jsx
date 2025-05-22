@@ -1,6 +1,7 @@
 import { ArrowDown, Code } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
+
 const Hero = () => {
 
 
@@ -30,16 +31,7 @@ const Hero = () => {
 
 
     return (
-        <section className='min-h-screen flex items-center relative overflow-hidden pt-16'>
-            <div className="absolute inset-0 opacity-20 z-0" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2300ffe7' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }}></div>
-            <div
-                className="absolute z-0 w-80 h-80 rounded-full blur-[100px] bg-primary/30 animate-pulse duration-1000"
-                style={{ top: '10%', right: '10%' }}
-            ></div>
-            <div
-                className="absolute z-0 w-80 h-80 rounded-full blur-[100px] bg-secondary/30 animate-pulse delay-1000 duration-500"
-                style={{ bottom: '10%', left: '10%' }}
-            ></div>
+        <section className='page min-h-screen flex items-center relative overflow-hidden pt-16'>
 
             <div className="container mx-auto px-4 z-0 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -47,7 +39,7 @@ const Hero = () => {
                         <div className="space-y-6">
                             <div className='font-tech'>
                                 <p className="text-primary text-lg mb-2 font-tech">
-                                    <span className="inline-block animate-neon-flicker">&lt;</span>Hello_World<span className="inline-block animate-neon-flicker">/&gt;</span>
+                                    <span className="inline-block">&lt;</span>Hello_World<span className="inline-block animate-neon-flicker">/&gt;</span>
                                 </p>
                                 <h1 className="cyber-glitch text-4xl sm:text-5xl md:text-7xl font-cyber font-bold tracking-tighter mb-4" data-text="Web Developer">
                                     Web Developer
@@ -63,7 +55,7 @@ const Hero = () => {
                             </p>
 
                             <div className="flex flex-wrap gap-4 pt-4">
-                                <a href="#contact" className="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-cyber font-bold text-dark bg-primary border-2 border-primary transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;">
+                                <a href="#contact" className="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-cyber font-bold text-dark bg-primary border-2 border-primary transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">
                                     Connect
                                     <Code className="ml-2" size={18} />
                                 </a>
