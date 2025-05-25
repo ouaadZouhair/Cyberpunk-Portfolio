@@ -10,7 +10,7 @@ const Navbar = () => {
                     </div>
 
                     <nav className='hidden md:flex space-x-8'>
-                        {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item, index) => (
+                        {['Home', 'About', 'Projects', 'Contact'].map((item, index) => (
                             <a
                                 key={index}
                                 href={`#${item.toLowerCase()}`}
@@ -23,13 +23,13 @@ const Navbar = () => {
                     </nav>
 
                     <div className="hidden md:flex items-center space-x-4">
-                        <a href="https://github.com" className="text-gray hover:text-primary transition-colors duration-300" aria-label="GitHub">
+                        <a href="https://github.com" className="text-gray hover:text-primary hover:scale-110 transition-all duration-300" aria-label="GitHub">
                             <Github size={24} />
                         </a>
-                        <a href="https://linkedin.com" className="text-gray hover:text-primary transition-colors duration-300" aria-label="LinkedIn">
+                        <a href="https://linkedin.com" className="text-gray hover:text-primary hover:scale-110 transition-all duration-300" aria-label="LinkedIn">
                             <Linkedin size={24} />
                         </a>
-                        <a href="mailto:contact@example.com" className="text-gray hover:text-primary transition-colors duration-300" aria-label="Email">
+                        <a href="mailto:contact@example.com" className="text-gray hover:text-primary hover:scale-110 transition-all duration-300" aria-label="Email">
                             <Mail size={24} />
                         </a>
                     </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { FaReact, FaNodeJs, FaDocker, FaAws } from 'react-icons/fa';
-import { SiJavascript, SiTailwindcss, SiMysql, SiGit, SiPhp, SiExpress } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaDocker } from 'react-icons/fa';
+import { SiJavascript, SiTailwindcss, SiMongodb, SiGit, SiPhp, SiExpress, SiWordpress, SiBootstrap, SiCanva } from 'react-icons/si';
 import { IoLogoLaravel } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
 
@@ -16,12 +16,21 @@ const AboutPage = () => {
       try {
         const [profile, repos] = await Promise.all([
           axios.get(`https://api.github.com/users/${githubUsername}`),
-          axios.get(`https://api.github.com/users/${githubUsername}/repos`)
+          axios.get(`https://api.github.com/users/${githubUsername}/repos?per_page=100`)
         ]);
 
+        // Calculate total stars and total contributions (from repo count)
+        const totalStars = repos.data.reduce((acc, repo) => acc + repo.stargazers_count, 0);
+        
         setGithubData({
           profile: profile.data,
-          repos: repos.data
+          repos: repos.data,
+          stats: {
+            totalRepos: profile.data.public_repos,
+            totalStars,
+            followers: profile.data.followers,
+            following: profile.data.following
+          }
         });
         setLoading(false);
       } catch (error) {
@@ -36,49 +45,54 @@ const AboutPage = () => {
   const skills = [
     { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400" />, level: 4 },
     { name: 'React', icon: <FaReact className="text-cyan-400" />, level: 4 },
+    { name: 'Tailwind', icon: <SiTailwindcss className="text-teal-400" />, level: 4 },
+    { name: 'Bootstrap', icon: <SiBootstrap  className="text-purple-700" />, level: 4 },
     { name: 'Node.js', icon: <FaNodeJs className="text-green-500" />, level: 3 },
     { name: 'Express.js', icon: <SiExpress className="text-white" />, level: 3 },
-    { name: 'PHP', icon: <SiPhp className="text-blue-600" />, level: 4 },
-    { name: 'MySql', icon: <GrMysql className="text-pink-400" />, level: 4 },
+    { name: 'MongoDB', icon: <SiMongodb className="text-green-500" />, level: 4 },
+    { name: 'PHP', icon: <SiPhp className="text-indigo-600" />, level: 4 },
     { name: 'Laravel', icon: <IoLogoLaravel className="text-red-500" />, level: 3 },
-    { name: 'Tailwind', icon: <SiTailwindcss className="text-teal-400" />, level: 5 },
-    { name: 'Docker', icon: <FaDocker className="text-blue-500" />, level: 3 },
+    { name: 'Wordpress', icon: <SiWordpress  className="text-gray-500" />, level: 2 },
+    { name: 'MySql', icon: <GrMysql className="text-blue-800" />, level: 4 },
+    { name: 'Docker', icon: <FaDocker className="text-blue-500" />, level: 2 },
     { name: 'Git', icon: <SiGit className="text-red-400" />, level: 4 },
+    { name: 'Canva', icon: <SiCanva   className="text-sky-400" />, level: 5 },
   ];
 
   return (
-    <div className="min-h-screen text-gray-200 font-tech p-6">
+    <div className="page min-h-screen text-gray-200 font-tech p-9">
       {/* Glitchy Title */}
-      <div className="mt-14 mb-7">
+      {/* <div className="mt-14 mb-7">
         <h1
           className="cyber-glitch text-5xl md:text-6xl font-tech mb-4 text-center"
           data-text="<About_Me/>"
         >
           <span className="inline-block">&lt;</span>About_Me<span className="inline-block animate-neon-flicker">/&gt;</span>
         </h1>
-      </div>
+      </div> */}
 
-      {/* First Row - Description and GitHub Info */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+      {/*  Description and GitHub Info */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mt-14 mb-7">
         {/* Developer Profile */}
         <div className="lg:col-span-2">
           <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-highlight shadow-lg shadow-highlight/20 h-full">
-            <h2 className="text-3xl font-cyber text-highlight mb-4">
-              FULL-STACK DEVELOPER
+            <h2 className="text-3xl font-cyber  text-center text-highlight mb-4">
+              ABOUT ME
             </h2>
-            <div className="space-y-4 text-lg">
+            <div className="space-y-4 text-lg ">
               <p>
-                <span className="text-secondary"></span> Greetings, netrunner. I'm a full-stack developer specializing in creating high-performance web applications with cutting-edge technologies.
+                <span className="text-secondary text-2xl">#</span> Greetings, netrunner. I'm Mohammed Zouhair Ouaad, a full-stack web developer passionate about building high-performance applications using modern technologies.
+              </p>
+               <p>
+                <span className="text-secondary text-2xl">#</span> I studied at ISTA NTIC Hay Riad Rabat, where I developed a solid technical background that fuels my ongoing growth in the tech world.
               </p>
               <p>
-                <span className="text-secondary"></span> With expertise spanning from front-end interfaces to back-end systems, I architect digital solutions that push boundaries and deliver exceptional user experiences.
+                <span className="text-secondary text-2xl">#</span> With a strong foundation in both front-end and back-end development, I craft clean, efficient, and secure code that ensures seamless user experiences across all platforms. My approach blends creativity with problem-solving, allowing me to deliver scalable and reliable digital solutions.
               </p>
               <p>
-                <span className="text-secondary"></span> My code is clean, efficient, and secure - optimized for performance across all platforms. I thrive in challenging environments that require creative problem-solving.
+                <span className="text-secondary text-2xl">#</span> My code is clean, efficient, and secure - optimized for performance across all platforms. I thrive in challenging environments that require creative problem-solving.
               </p>
-              <p>
-                <span className="text-secondary"></span> When not immersed in code, I contribute to open-source projects and stay ahead of the curve by constantly learning new frameworks and paradigms.
-              </p>
+             
             </div>
           </section>
 
@@ -88,6 +102,9 @@ const AboutPage = () => {
         {/* GitHub Analytics */}
         <div className="space-y-8 lg:grid-cols-1">
           <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-primary shadow-lg shadow-primary/20 ">
+            <h2 className="text-3xl font-cyber uppercase text-center text-primary mb-4">
+              GitHup Status
+            </h2>
             {loading ? (
               <div className="text-center py-8">
                 <div className="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>
@@ -113,6 +130,54 @@ const AboutPage = () => {
                     </a>
                   </div>
                 </div>
+
+
+                {/* Repository Languages and Recent Activity */}
+                <div className="mt-6">
+                  <h4 className="text-sm font-cyber mb-3 text-gray-400">TOP REPOSITORIES</h4>
+                  <div className="space-y-2 max-h-48 overflow-y-auto">
+                    {githubData.repos
+                      .sort((a, b) => b.stargazers_count - a.stargazers_count)
+                      .slice(0, 3)
+                      .map((repo) => (
+                        <a
+                          key={repo.id}
+                          href={repo.html_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block bg-dark-700/30 p-3 rounded-lg hover:bg-dark-700/50 transition-all"
+                        >
+                          <div className="flex justify-between items-center">
+                            <span className="text-highlight">{repo.name}</span>
+                            <span className="text-xs text-gray-400">⭐ {repo.stargazers_count}</span>
+                          </div>
+                          <p className="text-xs text-gray-400 truncate">{repo.description}</p>
+                        </a>
+                      ))}
+                  </div>
+                </div>
+
+                {/* GitHub Contribution Section */}
+                <div className="mt-6">
+                  <h4 className="text-sm font-cyber mb-3 text-gray-400">ACTIVITY METRICS</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-dark-700/30 p-3 rounded-lg">
+                      <span className="block text-xs text-gray-400">Last Push</span>
+                      <span className="text-sm">
+                        {new Date(Math.max(...githubData.repos.map(repo => new Date(repo.pushed_at))))
+                          .toLocaleDateString()}
+                      </span>
+                    </div>
+                    <div className="bg-dark-700/30 p-3 rounded-lg">
+                      <span className="block text-xs text-gray-400">Active Days</span>
+                      <span className="text-sm">
+                        {githubData.repos.filter(repo => 
+                          new Date(repo.pushed_at) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
+                        ).length} / 30
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             ) : (
               <div className="text-center py-8 text-gray-500">
@@ -121,18 +186,18 @@ const AboutPage = () => {
             )}
           </section>
 
-          <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-primary shadow-lg shadow-primary/20 h-80">
+          {/* <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-primary shadow-lg shadow-primary/20 h-80">
             
-          </section>
+          </section> */}
 
         </div>
       </div>
 
-      {/* Second Row - Skills Section (Full Width) */}
+      {/*Skills Section */}
       <div className="max-w-6xl mx-auto">
         <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-secondary shadow-lg shadow-secondary/20">
-          <h2 className="text-3xl font-cyber text-secondary mb-6">
-            SKILL_MATRIX
+          <h2 className="text-3xl font-cyber text-center text-secondary mb-6">
+            SKILLS
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {skills.map((skill, index) => (

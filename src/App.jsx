@@ -1,23 +1,24 @@
 import { useState } from 'react'
 import { gsap } from 'gsap/gsap-core'
 import { CSSPlugin } from 'gsap'
-import Navbar from './Components/Navbar'
+import { ChevronRight, ChevronLeft } from 'lucide-react'
+import Footer from './Components/Footer'
 import Hero from './pages/Hero'
 import About from './pages/About'
 import Projects from './pages/Projects'
-import Skills from './pages/Skills'
 import Contact from './pages/Contact'
 import './App.css'
 
 gsap.registerPlugin(CSSPlugin);
 
-const pages = [Hero, About, Projects, Skills, Contact]
+const pages = [Hero, About, Projects, Contact]
+const pageNames = ['Home', 'About', 'Projects', 'Contact']
 
 function App() {
   const [pageIndex, setPageIndex] = useState(0)
   const PageComponent = pages[pageIndex]
 
-  const handleNext = () =>{
+  const handleNext = () => {
     gsap.to('.page', {
       x: '-100%',
       opacity: 0,
@@ -25,20 +26,26 @@ function App() {
       ease: "power2.out",
       onComplete: () => {
         setPageIndex((prev) => (prev + 1) % pages.length)
-        gsap.fromTo('.page', {x: '100%', opacity: 0}, {x: "0%", opacity: 1, duration: 0.5});
+        gsap.fromTo('.page', 
+          { x: '100%', opacity: 0 }, 
+          { x: "0%", opacity: 1, duration: 0.5, ease: "power2.out" }
+        );
       }
     })
   }
 
-   const handlePrev = () =>{
+  const handlePrev = () => {
     gsap.to('.page', {
       x: '100%',
       opacity: 0,
       duration: 0.5,
       ease: "power2.out",
       onComplete: () => {
-        setPageIndex((prev) => (prev - 1) % pages.length)
-        gsap.fromTo('.page', {x: '-100%', opacity: 0}, {x: "0%", opacity: 1, duration: 0.5});
+        setPageIndex((prev) => (prev - 1 + pages.length) % pages.length)
+        gsap.fromTo('.page', 
+          { x: '-100%', opacity: 0 }, 
+          { x: "0%", opacity: 1, duration: 0.5, ease: "power2.out" }
+        );
       }
     })
   }
@@ -54,12 +61,33 @@ function App() {
         className="absolute z-0 w-80 h-80 rounded-full blur-[100px] bg-secondary/40 animate-pulse delay-1000 duration-500"
         style={{ bottom: '10%', left: '10%' }}
       ></div>
-      <Navbar />
+
+      {/* Navigation Controls */}
+      <nav className="fixed top-4 left-0 right-0 flex items-center justify-center gap-3 lg:gap-4 z-20">
+        <button 
+          onClick={handlePrev}
+          disabled={pageIndex === 0}
+          className="group flex items-center gap-2 px-4 py-3 bg-black/50 border-2 border-primary text-primary font-tech backdrop-blur-sm transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        
+        <div className="flex gap-2 p-3 rounded-full">
+          <h1 className='text-xl font-semibold bg-primary p-2 text-dark border-2 border-primary shadow-lg shadow-primary/40'>{pageNames[pageIndex]}</h1>
+        </div>
+
+        <button 
+          onClick={handleNext}
+          disabled={pageIndex === pages.length - 1}
+          className="group flex items-center gap-2 px-4 py-3 bg-black/50 border-2 border-primary text-primary font-tech backdrop-blur-sm transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </nav>
+      {/* <Navbar /> */}
       <PageComponent />
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-4">
-        <button onClick={handlePrev} className="px-4 py-2 bg-secondary font-semibold text-dark rounded transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_rgb(255, 0, 255, 0.5)] focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50">Prev</button>
-        <button onClick={handleNext} className="px-4 py-2 bg-secondary font-semibold text-dark rounded">Next</button>
-      </div>
+      <Footer/>
+      
     </div>
   )
 }
