@@ -1,4 +1,4 @@
-import { ArrowDown, Code } from 'lucide-react';
+import { IoIosCode } from "react-icons/io";
 import { useEffect, useState } from 'react';
 
 
@@ -56,7 +56,7 @@ const Hero = () => {
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <a href="#contact" className="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-cyber font-bold text-dark bg-primary border-2 border-primary transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">
                                     Connect
-                                    <Code className="ml-2" size={18} />
+                                    <IoIosCode className="ml-2" size={26} />
                                 </a>
                                 <a href="#projects" className="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-cyber font-bold text-primary bg-transparent border-2 border-primary transform 
            transition-all duration-300 ease-out hover:bg-primary/10 hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] 
@@ -90,8 +90,9 @@ const Hero = () => {
                             </p>
 
                             <img
-                                src="/me3.jpg"
+                                src="/me3.webp"
                                 alt="Glitched Avatar"
+                                loading='lazy'
                                 className="rounded-full w-80 h-w-80 md:w-[450px] md:h-[450px]"
                             />
                         </div>

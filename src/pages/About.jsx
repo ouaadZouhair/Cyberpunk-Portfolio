@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { FaReact, FaNodeJs, FaDocker } from 'react-icons/fa';
 import { SiJavascript, SiTailwindcss, SiMongodb, SiGit, SiPhp, SiExpress, SiWordpress, SiBootstrap, SiCanva } from 'react-icons/si';
 import { IoLogoLaravel } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
+import axios from 'axios';
 
 const AboutPage = () => {
   const [githubData, setGithubData] = useState(null);
