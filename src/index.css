@@ -5,9 +5,9 @@
 @theme {
   --color-primary: #00ffe7 ;
   --color-secondary: #ff00ff;
+  --color-highlight: #ffea00;
   --bg-dark: #0d0d1a;
   --color-dark: #0d0d1a;
-  --color-highlight: #ffea00;
   --color-gray: #e0e0e0;
   --font-cyber: 'Orbitron', sans-serif;
   --font-tech: 'Share Tech Mono', monospace;

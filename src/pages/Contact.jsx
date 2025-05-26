@@ -59,7 +59,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="page min-h-screen text-gray-200 font-tech p-9">
+    <div className="page min-h-screen text-gray-200 font-tech p-4 pt-9 md:p-9">
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 mt-14 mb-7 gap-8">
         {/* Contact Form */}

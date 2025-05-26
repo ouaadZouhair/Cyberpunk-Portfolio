@@ -60,16 +60,7 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="page min-h-screen text-gray-200 font-tech p-9">
-      {/* Glitchy Title */}
-      {/* <div className="mt-14 mb-7">
-        <h1
-          className="cyber-glitch text-5xl md:text-6xl font-tech mb-4 text-center"
-          data-text="<About_Me/>"
-        >
-          <span className="inline-block">&lt;</span>About_Me<span className="inline-block animate-neon-flicker">/&gt;</span>
-        </h1>
-      </div> */}
+    <div className="page min-h-screen text-gray-200 font-tech p-4 pt-9 md:p-9">
 
       {/*  Description and GitHub Info */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mt-14 mb-7">
@@ -81,16 +72,16 @@ const AboutPage = () => {
             </h2>
             <div className="space-y-4 text-lg ">
               <p>
-                <span className="text-secondary text-2xl">#</span> Greetings, netrunner. I'm Mohammed Zouhair Ouaad, a full-stack web developer passionate about building high-performance applications using modern technologies.
+                <span className="text-secondary text-2xl text-justify">#</span> Greetings, netrunner. I'm Mohammed Zouhair Ouaad, a full-stack web developer passionate about building high-performance applications using modern technologies.
               </p>
                <p>
-                <span className="text-secondary text-2xl">#</span> I studied at ISTA NTIC Hay Riad Rabat, where I developed a solid technical background that fuels my ongoing growth in the tech world.
+                <span className="text-secondary text-2xl text-justify">#</span> I studied at ISTA NTIC Hay Riad Rabat, where I developed a solid technical background that fuels my ongoing growth in the tech world.
               </p>
               <p>
-                <span className="text-secondary text-2xl">#</span> With a strong foundation in both front-end and back-end development, I craft clean, efficient, and secure code that ensures seamless user experiences across all platforms. My approach blends creativity with problem-solving, allowing me to deliver scalable and reliable digital solutions.
+                <span className="text-secondary text-2xl text-justify">#</span> With a strong foundation in both front-end and back-end development, I craft clean, efficient, and secure code that ensures seamless user experiences across all platforms. My approach blends creativity with problem-solving, allowing me to deliver scalable and reliable digital solutions.
               </p>
               <p>
-                <span className="text-secondary text-2xl">#</span> My code is clean, efficient, and secure - optimized for performance across all platforms. I thrive in challenging environments that require creative problem-solving.
+                <span className="text-secondary text-2xl text-justify">#</span> My code is clean, efficient, and secure optimized for performance across all platforms. I thrive in challenging environments that require creative problem solving.
               </p>
              
             </div>
@@ -116,6 +107,7 @@ const AboutPage = () => {
                   <img
                     src={githubData.profile.avatar_url}
                     alt="GitHub Avatar"
+                    loading='lazy'
                     className="w-24 h-24 border-2 border-primary rounded-full"
                   />
                   <div>

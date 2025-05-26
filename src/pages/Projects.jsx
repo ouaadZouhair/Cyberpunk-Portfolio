@@ -39,8 +39,8 @@ const Projects = () => {
   const projects = [
     {
       title: "Epic7ata Store",
-      description: "A comprehensive admin dashboard for e-commerce management with real-time analytics, inventory management, and order processing capabilities.",
-      image: "/projectsImg/Ecommerce.jpg", // Add your project images to public folder
+      description: "Epic7ata is a MERN stack clothing store for anime and pop-culture fans in Morocco. It features product browsing, design customization, cart, checkout, and admin management, with delivery across all Moroccan cities",
+      image: "/projectsImg/Ecommerce.webp", // Add your project images to public folder
       technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "React-router", "Redux",'Axios', "React-Form", "Chart.js"],
       githubLink: "https://github.com/ouaadZouhair/epic7ataShop",
       liveLink: null,
@@ -48,17 +48,17 @@ const Projects = () => {
     },
     {
       title: "Bankist Dashboard",
-      description: "A full-stack social media application with real-time chat, post sharing, and user authentication features.",
-      image: "/projectsImg/bankistDashbord.jpg",
+      description: "Bankist is a modern banking dashboard built with HTML, CSS and vanilla JavaScript. It features user login, transaction history, transfers, loan requests, and dynamic UI updates for a smooth user experience.",
+      image: "/projectsImg/bankistDashbord.webp",
       technologies: ["HTML", "CSS", 'JavaScript'],
       githubLink: "https://github.com/ouaadZouhair/bankist-client-darshboard",
       liveLink: "https://backist-client.netlify.app/",
       featured: false
     },
     {
-      title: "Bankist Landing page",
-      description: "A collaborative task management tool with drag-and-drop functionality, team assignments, and progress tracking.",
-      image: "/projectsImg/bankist.jpg",
+      title: "Bankist Landing Page",
+      description: "A sleek, responsive landing page for a fictional bank, built with HTML, CSS, and JavaScript. It features smooth scrolling, animated sections, and interactive elements to showcase modern banking services.",
+      image: "/projectsImg/bankist.webp",
       technologies: ["HTML", "CSS", 'JavaScript'],
       githubLink: "https://github.com/ouaadZouhair/bankist",
       liveLink: "https://bankist10.netlify.app/",
@@ -66,8 +66,8 @@ const Projects = () => {
     },
     {
       title: "Topico Store - Front-end",
-      description: "A collaborative task management tool with drag-and-drop functionality, team assignments, and progress tracking.",
-      image: "/projectsImg/ecommerceProject.jpg",
+      description: "Topico Store is a modern, responsive front-end for a tech e-commerce website. Built with HTML, CSS, and JavaScript, it features product listings, filters, shopping cart UI, and a clean user interface focused on tech gadgets.",
+      image: "/projectsImg/ecommerceProject.webp",
       technologies: ["HTML", "CSS", 'JavaScript'],
       githubLink: "https://github.com/ouaadZouhair/topico/tree/master",
       liveLink: "https://ecotopico.netlify.app/",
@@ -76,8 +76,8 @@ const Projects = () => {
 
     {
       title: "Forkify - Front-end",
-      description: "A collaborative task management tool with drag-and-drop functionality, team assignments, and progress tracking.",
-      image: "/projectsImg/forkify.jpg",
+      description: "Fortify is a responsive web app for finding healthy recipes. Built with HTML, CSS, and JavaScript, it uses an API to search recipes by ingredients or keywords, displaying results with cooking details and images.",
+      image: "/projectsImg/forkify.webp",
       technologies: ["HTML", "CSS", 'JavaScript'],
       githubLink: "https://github.com/yourusername/project3",
       liveLink: null,
@@ -85,9 +85,9 @@ const Projects = () => {
     },
 
     {
-      title: "Zouhair Portfolio - Front-end",
-      description: "A collaborative task management tool with drag-and-drop functionality, team assignments, and progress tracking.",
-      image: "/projectsImg/Portfolio.png",
+      title: "Developer Portfolio",
+      description: "A personal portfolio website built with HTML, CSS, JavaScript, and Tailwind CSS. It features responsive design, and a dark mode toggle to showcase projects and skills with a modern look.",
+      image: "/projectsImg/Portfolio.webp",
       technologies: ["HTML", "CSS", 'JavaScript', 'Tailwind Css'],
       githubLink: "https://github.com/ouaadZouhair/ZouhairOD",
       liveLink: "https://zouhairod.netlify.app/",
@@ -97,7 +97,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="page min-h-screen text-gray-200 font-tech p-9">
+    <section className="page min-h-screen text-gray-200 font-tech p-4 pt-9 md:p-9">
 
       {/* Featured Projects */}
       <div className="max-w-6xl mx-auto mt-14 mb-7">
@@ -194,7 +194,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
