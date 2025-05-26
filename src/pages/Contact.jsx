@@ -1,36 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaGithub, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    subject: '',
-    email: '',
-    message: ''
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically handle form submission to your backend
-    console.log(formData);
-    setSubmitted(true);
-    // Reset form after submission
-    setTimeout(() => {
-      setFormData({ name: '', email: '', message: '', subject: '' });
-      setSubmitted(false);
-    }, 3000);
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
   const socialLinks = [
     {
       name: 'LinkedIn',
@@ -60,20 +31,27 @@ const Contact = () => {
 
   return (
     <div className="page min-h-screen text-gray-200 font-tech p-4 pt-9 md:p-9">
-
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 mt-14 mb-7 gap-8">
         {/* Contact Form */}
         <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-highlight shadow-lg shadow-highlight/20">
           <h2 className="text-3xl font-cyber text-highlight mb-6 text-center">LET'S CONNECT</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
+
+          <form
+            action="https://formsubmit.co/ouaadzouhair11@gmail.com"
+            method="POST"
+            className="space-y-4"
+          >
+            {/* Optional Config */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            {/* <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" /> */}
+
             <div>
               <label htmlFor="fullname" className="block text-base font-tech mb-2">FULL NAME</label>
               <input
                 type="text"
-                id="name"
+                id="fullname"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
                 required
                 className="w-full bg-dark-700/50 border border-highlight/50 rounded-lg p-3 text-gray-200 focus:border-highlight focus:ring-1 focus:ring-highlight outline-none transition-all"
                 placeholder="Enter your name"
@@ -86,8 +64,6 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
                 required
                 className="w-full bg-dark-700/50 border border-highlight/50 rounded-lg p-3 text-gray-200 focus:border-highlight focus:ring-1 focus:ring-highlight outline-none transition-all"
                 placeholder="Enter your email"
@@ -95,44 +71,40 @@ const Contact = () => {
             </div>
 
             <div>
-              <label htmlFor="Subject" className="block text-base font-tech mb-2">SUBJECT</label>
+              <label htmlFor="subject" className="block text-base font-tech mb-2">SUBJECT</label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                value={formData.subject}
-                onChange={handleChange}
                 required
                 className="w-full bg-dark-700/50 border border-highlight/50 rounded-lg p-3 text-gray-200 focus:border-highlight focus:ring-1 focus:ring-highlight outline-none transition-all"
                 placeholder="What's your subject"
               />
             </div>
-            
+
             <div>
               <label htmlFor="message" className="block text-base font-tech mb-2">MESSAGE</label>
               <textarea
                 id="message"
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
                 rows={6}
+                required
                 className="w-full bg-dark-700/50 border border-highlight/50 rounded-lg p-3 text-gray-200 focus:border-highlight focus:ring-1 focus:ring-highlight outline-none transition-all resize-none"
                 placeholder="Enter your message"
               />
             </div>
+
             <button
               type="submit"
               className="w-full bg-highlight/20 hover:bg-highlight/30 text-highlight border border-highlight py-3 px-6 transition-all duration-300 font-tech"
             >
-              {submitted ? 'MESSAGE SENT!' : 'SEND MESSAGE'}
+              SEND MESSAGE
             </button>
           </form>
         </section>
 
         {/* Social Links and Info */}
         <section className="space-y-8">
-          {/* Contact Info */}
           <div className="bg-black/30 backdrop-blur-lg p-6 border-2 border-primary shadow-lg shadow-primary/20">
             <h2 className="text-3xl font-cyber text-primary mb-6 text-center">CONNECT WITH ME</h2>
             <div className="grid grid-cols-2 gap-6">
@@ -151,7 +123,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Additional Info */}
           <div className="bg-black/30 backdrop-blur-lg p-6 border-2 border-secondary shadow-lg shadow-secondary/20">
             <h2 className="text-3xl font-cyber text-secondary mb-6 text-center">AVAILABILITY</h2>
             <div className="space-y-4 text-center">
