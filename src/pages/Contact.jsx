@@ -1,31 +1,33 @@
-import React from 'react';
+import { useState } from 'react';
 import { FaGithub, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
+  const [email, setEmail] = useState('')
+
   const socialLinks = [
     {
       name: 'LinkedIn',
       icon: <FaLinkedin className="text-2xl" />,
-      link: 'https://linkedin.com/in/your-linkedin',
-      color: 'hover:bg-blue-500/40'
+      info: 'Mohammed Zouhir Ouaâd',
+      color: 'bg-blue-500/90 text-white',
     },
     {
       name: 'GitHub',
       icon: <FaGithub className="text-2xl" />,
-      link: 'https://github.com/ouaadZouhair',
-      color: 'hover:bg-gray-300/70 hover:text-black'
+      info: 'github.com/ouaadzouhair',
+      color: 'bg-gray-300 text-black'
     },
     {
       name: 'Phone',
       icon: <FaPhone className="text-2xl" />,
-      link: 'tel:+1234567890',
-      color: 'hover:bg-green-500/40'
+      info: '+212763835972',
+      color: 'bg-green-500 text-white'
     },
     {
       name: 'Email',
       icon: <FaEnvelope className="text-2xl" />,
-      link: 'mailto:your.email@example.com',
-      color: 'hover:bg-red-500/40'
+      info: 'ouaadzouhair11@gmail.com',
+      color: 'bg-red-500 text-white'
     }
   ];
 
@@ -37,7 +39,7 @@ const Contact = () => {
           <h2 className="text-3xl font-cyber text-highlight mb-6 text-center">LET'S CONNECT</h2>
 
           <form
-            action="https://formsubmit.co/ouaadzouhair11@gmail.com"
+            action={`https://formsubmit.co/${email}`}
             method="POST"
             className="space-y-4"
           >
@@ -64,6 +66,7 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full bg-dark-700/50 border border-highlight/50 rounded-lg p-3 text-gray-200 focus:border-highlight focus:ring-1 focus:ring-highlight outline-none transition-all"
                 placeholder="Enter your email"
@@ -107,19 +110,25 @@ const Contact = () => {
         <section className="space-y-8">
           <div className="bg-black/30 backdrop-blur-lg p-6 border-2 border-primary shadow-lg shadow-primary/20">
             <h2 className="text-3xl font-cyber text-primary mb-6 text-center">CONNECT WITH ME</h2>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-2 md:gap-6">
               {socialLinks.map((social, index) => (
-                <a
+                <div
                   key={index}
-                  href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex flex-col items-center p-4 bg-dark-700/30 rounded ${social.color} transition-all duration-300 hover:scale-105`}
+                  className="group relative flex flex-col items-center p-4 bg-dark-700/30 rounded transition-all duration-300 hover:scale-105"
                 >
                   {social.icon}
                   <span className="mt-2 text-sm font-cyber">{social.name}</span>
-                </a>
+
+                  {/* Tooltip */}
+                  <div className={`absolute -top-6 mb-2 px-2 py-1 text-base md:text-lg ${social.color} rounded opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 pointer-events-none`}>
+                    {social.info}
+                    <div className={`absolute left-1/2 -bottom-1 transform -translate-x-1/2 w-2 h-2 ${social.color} rotate-45`}></div>
+                  </div>
+                </div>
               ))}
+
             </div>
           </div>
 
