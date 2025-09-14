@@ -67,12 +67,12 @@ const Hero = () => {
                             
                             </p>
 
-                            <div className="flex flex-wrap gap-1 md:gap-4 pt-4">
-                                <button onClick={handleContactClick} className="text-sm w-full relative cursor-pointer inline-flex items-center justify-center px-3 py-1 md:px-4 md:py-2 overflow-hidden font-cyber font-bold text-dark bg-primary border-2 border-primary transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">
+                            <div className="flex flex-col md:flex-row gap-1 md:gap-4 pt-4">
+                                <button onClick={handleContactClick} className="text-sm w-full md:text-base md:w-1/2 relative cursor-pointer inline-flex items-center justify-center px-3 py-1 md:px-4 md:py-2 overflow-hidden font-cyber font-bold text-dark bg-primary border-2 border-primary transform transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">
                                     {t('hero.connect')}
                                     <IoIosCode className="ml-2" size={26} />
                                 </button>
-                                <button onClick={handleProjectsClick} className="text-sm w-full relative cursor-pointer inline-flex items-center justify-center px-4 py-2 overflow-hidden font-cyber font-bold text-primary bg-transparent border-2 border-primary transform transition-all duration-300 ease-out hover:bg-primary/10 hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">
+                                <button onClick={handleProjectsClick} className="text-sm w-full md:text-base md:w-1/2 relative cursor-pointer inline-flex items-center justify-center px-4 py-2 overflow-hidden font-cyber font-bold text-primary bg-transparent border-2 border-primary transform transition-all duration-300 ease-out hover:bg-primary/10 hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">
                                     {t('hero.view_projects')}
                                 </button>
                             </div>
