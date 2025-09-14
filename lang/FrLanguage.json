@@ -1,0 +1,81 @@
+{
+    "navigation": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "hello": "Bonjour_LeMonde",
+    "title": "Développeur Web",
+    "subtitle": {
+      "design": "Design",
+      "code": "Code",
+      "create": "Créer"
+    },
+    "online": "En ligne",
+    "description": "Créer des projets numériques avec un code propre et un design de pointe. Transformer des problèmes complexes en solutions élégantes.",
+    "connect": "Me Contacter",
+    "view_projects": "Voir les Projets"
+  },
+  "about": {
+    "title": "À PROPOS DE MOI",
+    "intro": "Salutations, netrunner. Je suis Mohammed Zouhair Ouaad, développeur web full-stack passionné par la création d'applications performantes en utilisant des technologies modernes.",
+    "education": "J'ai étudié à l'ISTA NTIC Hay Riad Rabat, où j'ai acquis une solide base technique qui alimente ma croissance continue dans le monde de la tech.",
+    "skills": "Avec une base solide en développement front-end et back-end, je crée du code propre, efficace et sécurisé, garantissant des expériences utilisateur fluides sur toutes les plateformes. Mon approche allie créativité et résolution de problèmes, ce qui me permet de fournir des solutions numériques fiables et évolutives.",
+    "philosophy": "Mon code est propre, efficace et sécurisé, optimisé pour la performance sur toutes les plateformes. Je m'épanouis dans des environnements exigeants qui demandent une résolution créative des problèmes."
+  },
+  "skills": "COMPÉTENCES",
+
+  "projects": [
+  {
+    "title": "Epic7ata Store",
+    "description": "Epic7ata est une boutique de vêtements basée sur la stack MERN destinée aux fans d'anime et de pop-culture au Maroc. Elle propose la navigation des produits, la personnalisation de design, le panier, le paiement et la gestion administrative, avec livraison dans toutes les villes marocaines."
+  },
+  {
+    "title": "Bankist Dashboard",
+    "description": "Bankist est un tableau de bord bancaire moderne construit avec HTML, CSS et JavaScript pur. Il comprend la connexion utilisateur, l'historique des transactions, les virements, les demandes de prêt et des mises à jour dynamiques de l'interface pour une expérience fluide."
+  },
+  {
+    "title": "Page d'accueil Bankist",
+    "description": "Une page d'accueil élégante et réactive pour une banque fictive, construite avec HTML, CSS et JavaScript. Elle propose un défilement fluide, des sections animées et des éléments interactifs pour mettre en valeur les services bancaires modernes."
+  },
+  {
+    "title": "Topico Store - Front-end",
+    "description": "Topico Store est un front-end moderne et réactif pour un site e-commerce technologique. Construit avec HTML, CSS et JavaScript, il comprend des listes de produits, des filtres, une interface de panier et une interface utilisateur soignée axée sur les gadgets."
+  },
+  {
+    "title": "Forkify - Front-end",
+    "description": "Forkify est une application web réactive pour trouver des recettes saines. Construite avec HTML, CSS et JavaScript, elle utilise une API pour rechercher des recettes par ingrédients ou mots-clés, affichant les résultats avec détails et images."
+  },
+  {
+    "title": "Portfolio Développeur",
+    "description": "Un site portfolio personnel créé avec HTML, CSS, JavaScript et Tailwind CSS. Il comprend un design réactif et un mode sombre pour présenter les projets et compétences avec un look moderne."
+  }
+],
+    "featured_work": "TRAVAUX EN VEDETTE",
+    "other_work": "AUTRES TRAVAUX",
+
+    "contact": {
+      "letsConnect": "ENTRONS EN CONTACT",
+      "fullName": "NOM COMPLET",
+      "email": "EMAIL",
+      "subject": "SUJET",
+      "message": "MESSAGE",
+      "sendMessage": "ENVOYER LE MESSAGE",
+      "connectWithMe": "CONNECTEZ MOI",
+      "availability": "DISPONIBILITÉ",
+      "availableFreelance": "Disponible pour des missions freelance",
+      "openFullTime": "Ouvert aux opportunités à temps plein",
+      "responseTime": "Délai de réponse : sous 24 heures",
+      "placeholder": {
+        "name": "Entrez votre nom",
+        "email": "Entrez votre email",
+        "subject": "Quel est votre sujet",
+        "message": "Entrez votre message"
+      }
+    },
+
+  "footer": "Créé avec ❤️ par Zouhair Ouaad. Tous droits réservés."
+
+}

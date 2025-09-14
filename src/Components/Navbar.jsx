@@ -1,42 +1,39 @@
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import LanguageSwitcher from "../ui/LanguageSwitcher";
 
-const Navbar = () => {
-    return (
-        <header className='fixed top-0 left-0 w-full bg-black/10 font-cyber backdrop-blur-md border-b border-primary/60 z-10'>
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className='flex justify-between items-center py-4'>
-                    <div className='flex items-center'>
-                        <a href='#hero' className='text-2xl font-bold text-primary'>ZOUHAIR<span className='text-secondary'>::</span>OD</a>
-                    </div>
+const Navbar = ({ pageIndex, pageNames, pagesLength, handlePrev, handleNext }) => {
+  return (
+    <nav className="fixed top-4 left-0 right-0 flex items-center justify-center z-20">
+      <div className="relative w-full flex justify-center items-center">
+        <div className="flex items-center gap-1">
+          <button
+            onClick={handlePrev}
+            disabled={pageIndex === 0}
+            className="group flex items-center gap-2 p-1 md:p-3  bg-black/50 border-2 border-primary text-primary font-tech backdrop-blur-sm transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <MdOutlineKeyboardArrowLeft size={30} />
+          </button>
 
-                    <nav className='hidden md:flex space-x-8'>
-                        {['Home', 'About', 'Projects', 'Contact'].map((item, index) => (
-                            <a
-                                key={index}
-                                href={`#${item.toLowerCase()}`}
-                                className="text-gray text-lg font-tech hover:text-primary transform transition-colors duration-300 relative group"
-                            >
-                                {item}
-                                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                        ))}
-                    </nav>
+          <div className="flex gap-2 p-1 md:p-3 rounded-full">
+            <h1 className="text-base md:text-xl font-semibold bg-primary p-2 text-dark border-2 border-primary shadow-lg shadow-primary/40">
+              {pageNames[pageIndex]}
+            </h1>
+          </div>
 
-                    <div className="hidden md:flex items-center space-x-4">
-                        <a href="https://github.com" className="text-gray hover:text-primary hover:scale-110 transition-all duration-300" aria-label="GitHub">
-                            <Github size={24} />
-                        </a>
-                        <a href="https://linkedin.com" className="text-gray hover:text-primary hover:scale-110 transition-all duration-300" aria-label="LinkedIn">
-                            <Linkedin size={24} />
-                        </a>
-                        <a href="mailto:contact@example.com" className="text-gray hover:text-primary hover:scale-110 transition-all duration-300" aria-label="Email">
-                            <Mail size={24} />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
-    )
-}
+          <button
+            onClick={handleNext}
+            disabled={pageIndex === pagesLength - 1}
+            className="group flex items-center gap-2 p-1 md:p-3  bg-black/50 border-2 border-primary text-primary font-tech backdrop-blur-sm transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,231,0.5)] disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <MdOutlineKeyboardArrowRight size={30} />
+          </button>
+        </div>
 
-export default Navbar
+        {/* Language Toggle */}
+        <LanguageSwitcher />
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

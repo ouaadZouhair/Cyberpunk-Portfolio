@@ -1,0 +1,84 @@
+
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "hello": "Hello_World",
+    "title": "Web Developer",
+    "subtitle": {
+      "design": "Design",
+      "code": "Code",
+      "create": "Create"
+    },
+    "online": "Online",
+    "description": "Building digital projects with clean code and cutting-edge design. Turning complex problems into elegant solutions.",
+    "connect": "Connect",
+    "view_projects": "View Projects"
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "intro": "Greetings, netrunner. I'm Mohammed Zouhair Ouaad, a full-stack web developer passionate about building high-performance applications using modern technologies.",
+    "education": "I studied at ISTA NTIC Hay Riad Rabat, where I developed a solid technical background that fuels my ongoing growth in the tech world.",
+    "skills": "With a strong foundation in both front-end and back-end development, I craft clean, efficient, and secure code that ensures seamless user experiences across all platforms. My approach blends creativity with problem-solving, allowing me to deliver scalable and reliable digital solutions.",
+    "philosophy": "My code is clean, efficient, and secure — optimized for performance across all platforms. I thrive in challenging environments that require creative problem solving."
+  },
+  "skills" : "SKILLS",
+  "projects": [
+  {
+    "title": "Epic7ata Store",
+    "description": "Epic7ata is a MERN stack clothing store for anime and pop-culture fans in Morocco. It features product browsing, design customization, cart, checkout, and admin management, with delivery across all Moroccan cities."
+  },
+  {
+    "title": "Bankist Dashboard",
+    "description": "Bankist is a modern banking dashboard built with HTML, CSS and vanilla JavaScript. It features user login, transaction history, transfers, loan requests, and dynamic UI updates for a smooth user experience."
+  },
+  {
+    "title": "Bankist Landing Page",
+    "description": "A sleek, responsive landing page for a fictional bank, built with HTML, CSS, and JavaScript. It features smooth scrolling, animated sections, and interactive elements to showcase modern banking services."
+  },
+  {
+    "title": "Topico Store - Front-end",
+    "description": "Topico Store is a modern, responsive front-end for a tech e-commerce website. Built with HTML, CSS, and JavaScript, it features product listings, filters, shopping cart UI, and a clean user interface focused on tech gadgets."
+  },
+  {
+    "title": "Forkify - Front-end",
+    "description": "Forkify is a responsive web app for finding healthy recipes. Built with HTML, CSS, and JavaScript, it uses an API to search recipes by ingredients or keywords, displaying results with cooking details and images."
+  },
+  {
+    "title": "Developer Portfolio",
+    "description": "A personal portfolio website built with HTML, CSS, JavaScript, and Tailwind CSS. It features responsive design, and a dark mode toggle to showcase projects and skills with a modern look."
+  }
+  ],
+ 
+  "featured_work": "FEATURED WORK",
+  "other_work": "OTHER WORK",
+
+  "contact":{
+    "letsConnect": "LET'S CONNECT",
+    "fullName": "FULL NAME",
+    "email": "EMAIL",
+    "subject": "SUBJECT",
+    "message": "MESSAGE",
+    "sendMessage": "SEND MESSAGE",
+    "connectWithMe": "CONNECT ME",
+    "availability": "AVAILABILITY",
+    "availableFreelance": "Available for freelance work",
+    "openFullTime": "Open to full-time opportunities",
+    "responseTime": "Response time: Within 24 hours",
+    "placeholder": {
+      "name": "Enter your name",
+      "email": "Enter your email",
+      "subject": "What's your subject",
+      "message": "Enter your message"
+    }
+  },
+
+  "footer": "Created with ❤️ by Zouhair Ouaad. All rights reserved."
+
+
+  
+}
