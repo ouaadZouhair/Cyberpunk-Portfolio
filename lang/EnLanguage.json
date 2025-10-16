@@ -21,10 +21,9 @@
   },
   "about": {
     "title": "ABOUT ME",
-    "intro": "Greetings, netrunner. I'm Mohammed Zouhair Ouaad, a full-stack web developer passionate about building high-performance applications using modern technologies.",
-    "education": "I studied at ISTA NTIC Hay Riad Rabat, where I developed a solid technical background that fuels my ongoing growth in the tech world.",
-    "skills": "With a strong foundation in both front-end and back-end development, I craft clean, efficient, and secure code that ensures seamless user experiences across all platforms. My approach blends creativity with problem-solving, allowing me to deliver scalable and reliable digital solutions.",
-    "philosophy": "My code is clean, efficient, and secure — optimized for performance across all platforms. I thrive in challenging environments that require creative problem solving."
+    "intro": "Hey! I’m Mohammed Zouhair Ouaad, a full-stack web developer who loves building modern, fast, and easy to use websites.",
+    "education": "I graduated in 2020 from ISTA NTIC Hay Riad Rabat, where I built a solid foundation in web development and discovered how much I enjoy turning ideas into real, working products. Since then, I’ve been honing my skills and expanding my knowledge through personal projects and freelance work.",
+    "philosophy": "I like to keep my work clean, secure, and simple, focusing on what really matters making things that look good and work smoothly. When I work with clients, I care about good communication and collaboration, making sure the process feels clear and enjoyable from start to finish."
   },
   "skills" : "SKILLS",
   "projects": [

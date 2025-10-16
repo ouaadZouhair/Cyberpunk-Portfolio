@@ -80,9 +80,7 @@ const AboutPage = () => {
                <p>
                 <span className="text-secondary text-2xl text-justify">#</span> {t('about.education')}
               </p>
-              <p>
-                <span className="text-secondary text-2xl text-justify">#</span> {t('about.skills')}
-              </p>
+              
               <p>
                 <span className="text-secondary text-2xl text-justify">#</span> {t('about.philosophy')}
               </p>
