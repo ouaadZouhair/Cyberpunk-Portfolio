@@ -48,7 +48,7 @@ const Hero = () => {
 
             <div className="container mx-auto px-4 z-0 py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div className="order-2 lg:order-1">
+                    <div className="order-2 lg:order-1 px-4 md:px-16 lg:px-0">
                         <div className="space-y-6">
                             <div className='font-tech'>
                                 <p className="text-primary text-lg mb-2 font-tech">
@@ -62,7 +62,7 @@ const Hero = () => {
                                 </h2>
                             </div>
 
-                            <p className="text-gray/80 max-w-md md:text-lg border-l-2 font-tech border-primary/50 pl-4 py-2">
+                            <p className="text-gray/80 w-full md:max-w-md md:text-lg border-l-2 font-tech border-primary/50 pl-4 py-2">
                                 {t('hero.description')}
                             
                             </p>
@@ -81,13 +81,14 @@ const Hero = () => {
 
                     <div className="order-1 w-full mx-auto lg:order-2">
                         <div className="flex items-center justify-center relative">                        
-                            <p className="flex items-center justify-between gap-2 rounded-full border-2 border-[#00FF41] text-white text-sm md:text-md bg-black/60 font-tech font-semibold absolute top-1 right-0 md:right-45 lg:right-25 p-2.5 animate-bounce">
+                            <p className="flex items-center justify-between gap-2 rounded-full border-2 border-[#00FF41] text-white text-sm md:text-lg bg-black/60 font-tech font-semibold absolute top-1 right-10 md:right-45 lg:right-25 p-2.5 animate-bounce">
                             <span className="w-3.5 h-3.5 bg-[#00FF41] rounded-full animate-pulse [animation-duration:0.5s]"></span>
                                 {t("hero.online")}
                             </p>
 
                             <img
-                            src="/me3.webp"
+                            // src="/me3.webp"
+                            src="/med_zouhair.png"
                             alt="Glitched Avatar"
                             loading="lazy"
                             className="rounded-full w-[300px] h-[300px] md:w-[450px] md:h-[450px]"
