@@ -59,7 +59,7 @@ const AboutPage = () => {
     { name: 'Wordpress', icon: <SiWordpress  className="text-gray-500" />, level: 3 },
     { name: 'Docker', icon: <FaDocker className="text-blue-500" />, level: 2 },
     { name: 'Git', icon: <SiGit className="text-red-400" />, level: 4 },
-    { name: 'Canva', icon: <SiCanva   className="text-sky-400" />, level: 5 },
+    { name: 'Canva', icon: <SiCanva className="text-sky-400" />, level: 5 },
   ];
 
   return (
@@ -70,10 +70,10 @@ const AboutPage = () => {
         {/* Developer Profile */}
         <div className="lg:col-span-2">
           <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-highlight shadow-lg shadow-highlight/20 h-full">
-            <h2 className="text-3xl font-cyber  text-center text-highlight mb-4">
+            <h2 className="text-4xl w-full font-cyber  text-center text-highlight mb-4">
               {t('about.title')}
             </h2>
-            <div className="space-y-4 text-lg ">
+            <div className="space-y-4 text-lg text-justify">
               <p>
                 <span className="text-secondary text-2xl text-justify">#</span> {t('about.intro')}
               </p>
@@ -95,18 +95,20 @@ const AboutPage = () => {
         <div className="hidden lg:block space-y-8 lg:grid-cols-1">
             <div className="relative group">
               <img
-                src="/avatar_zouhair.png"
+                src="/zouhair_picture.webp"
                 alt="Mohammed Zouhair Ouaad avatar"
-                className="w-full h-auto  object-cover border-2 border-primary shadow-[0_0_30px_#00ffff]/50 transition-transform duration-500"
+                className="w-full h-auto object-cover border-2 border-white shadow-white/50 transition-transform duration-500"
               />
             </div>
         </div>
+
+
 
       </div>
 
       <div className="max-w-6xl mx-auto">
         <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-secondary shadow-lg shadow-secondary/20">
-          <h2 className="text-3xl font-cyber text-center text-secondary mb-6">
+          <h2 className="text-4xl font-cyber text-center text-secondary mb-6">
             {t('skills')}
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
@@ -115,15 +117,15 @@ const AboutPage = () => {
                 <div className="text-4xl mb-2">
                   {skill.icon}
                 </div>
-                <span className="font-cyber text-sm mb-1">{skill.name}</span>
-                <div className="flex space-x-1">
+                <span className="text-lg mb-1">{skill.name}</span>
+                {/* <div className="flex space-x-1">
                   {[...Array(5)].map((_, i) => (
                     <div
                       key={i}
                       className={`w-3 h-3 rounded-full ${i < skill.level ? 'bg-secondary border border-secondary' : 'bg-secondary/10'}`}
                     />
                   ))}
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

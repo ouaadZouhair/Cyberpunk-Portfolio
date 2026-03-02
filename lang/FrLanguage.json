@@ -6,23 +6,23 @@
     "contact": "Contact"
   },
   "hero": {
-    "hello": "Bonjour_LeMonde",
+    "hello": "Bonjour_Le_Monde",
     "title": "Développeur Web",
     "subtitle": {
       "design": "Design",
       "code": "Code",
-      "create": "Créer"
+      "level": "evoluer"
     },
     "online": "En ligne",
-    "description": "Créer des projets numériques avec un code propre et un design de pointe. Transformer des problèmes complexes en solutions élégantes.",
+    "description": "Je crée des sites modernes, rapides et fonctionnels pour booster votre business et le mettre en ligne.",
     "connect": "Me Contacter",
     "view_projects": "Voir les Projets"
   },
   "about": {
-    "title": "À PROPOS DE MOI",
-    "intro": "Salut ! Je m’appelle Mohammed Zouhair Ouaad, je suis développeur web full-stack et je suis passionné par la création de sites modernes, rapides et faciles à utiliser",
-    "education": "J’ai obtenu mon diplôme en 2023 à l’ISTA NTIC Hay Riad Rabat, où j’ai acquis une solide base en développement web et découvert à quel point j’aime transformer des idées en projets concrets et fonctionnels. Depuis, je continue à approfondir mes compétences et à élargir mes connaissances à travers des projets personnels et des missions en freelance.",
-    "philosophy": "J’aime garder mon travail clair, sécurisé et efficace, en me concentrant sur l’essentiel : créer des expériences qui sont à la fois belles et fluides. Quand je collabore avec un client, je mise sur une communication simple et transparente, pour que chaque étape du projet soit agréable et bien comprise."
+    "title": "mon parcours",
+    "intro": "En 2020, j’ai découvert le développement web par curiosité… et cette curiosité est vite devenue une véritable passion. Aujourd’hui, avec plus de 2 ans d’expérience, je prends plaisir à transformer des idées en expériences digitales modernes, rapides et intuitives.",
+    "education": "Je suis Mohammed Zouhair Ouaad, développeur web full-stack diplômé de l’ISTA NTIC Hay Riad à Rabat. À travers mes projets et missions freelance, je conçois des solutions performantes en mettant l’accent sur la clarté, la sécurité et l’expérience utilisateur.",
+    "philosophy": "Pour moi, chaque projet est une collaboration : écouter, comprendre et créer des solutions qui ont un réel impact. Je suis toujours à la recherche de nouveaux défis pour continuer à apprendre et à évoluer dans ce domaine passionnant."
   },
   "skills": "COMPÉTENCES",
 
@@ -52,21 +52,21 @@
     "description": "Un site portfolio personnel créé avec HTML, CSS, JavaScript et Tailwind CSS. Il comprend un design réactif et un mode sombre pour présenter les projets et compétences avec un look moderne."
   }
 ],
-    "featured_work": "TRAVAUX EN VEDETTE",
-    "other_work": "AUTRES TRAVAUX",
+    "featured_work": "travaux en vedette",
+    "other_work": "autres travaux",
 
     "contact": {
-      "letsConnect": "ENTRONS EN CONTACT",
+      "letsConnect": "entrons en contact",
       "fullName": "NOM COMPLET",
       "email": "EMAIL",
       "subject": "SUJET",
       "message": "MESSAGE",
       "sendMessage": "ENVOYER LE MESSAGE",
-      "connectWithMe": "CONNECTEZ MOI",
-      "availability": "DISPONIBILITÉ",
-      "availableFreelance": "Disponible pour des missions freelance",
-      "openFullTime": "Ouvert aux opportunités à temps plein",
-      "responseTime": "Délai de réponse : sous 24 heures",
+      "connectWithMe": "connectez moi",
+      "currentStatus": "état actuel",
+      "availableFreelance": "Prêt à donner vie à vos idées web",
+      "openFullTime": "Ouvert à des projets web innovants et impactants",
+      "responseTime": "Réponse rapide – Je vous répondrai dans quelques heures",
       "placeholder": {
         "name": "Entrez votre nom",
         "email": "Entrez votre email",

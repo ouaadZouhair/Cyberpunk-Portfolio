@@ -12,20 +12,20 @@
     "subtitle": {
       "design": "Design",
       "code": "Code",
-      "create": "Create"
+      "level": "Level Up"
     },
     "online": "Online",
-    "description": "Building digital projects with clean code and cutting-edge design. Turning complex problems into elegant solutions.",
+    "description": "I create modern, fast and functional websites to boost your business and put it online.",
     "connect": "Connect",
     "view_projects": "View Projects"
   },
   "about": {
-    "title": "ABOUT ME",
-    "intro": "Hey! I’m Mohammed Zouhair Ouaad, a full-stack web developer who loves building modern, fast, and easy to use websites.",
-    "education": "I graduated in 2020 from ISTA NTIC Hay Riad Rabat, where I built a solid foundation in web development and discovered how much I enjoy turning ideas into real, working products. Since then, I’ve been honing my skills and expanding my knowledge through personal projects and freelance work.",
-    "philosophy": "I like to keep my work clean, secure, and simple, focusing on what really matters making things that look good and work smoothly. When I work with clients, I care about good communication and collaboration, making sure the process feels clear and enjoyable from start to finish."
+    "title": "my story",
+    "intro": "In 2020, I discovered web development out of curiosity… and that curiosity quickly turned into a true passion. Today, with over 2 years of experience, I enjoy transforming ideas into modern, fast, and intuitive digital experiences.",
+    "education": "I’m Mohammed Zouhair Ouaad, a full-stack web developer graduated from ISTA NTIC Hay Riad in Rabat. Through personal projects and freelance work, I build high-performance solutions with a strong focus on clarity, security, and user experience.",
+    "philosophy": "For me, every project is a collaboration: listening, understanding, and creating solutions that make a real impact. I am always seeking new challenges to continue learning and growing in this exciting field."
   },
-  "skills" : "SKILLS",
+  "skills" : "skills",
   "projects": [
   {
     "title": "Epic7ata Store",
@@ -53,21 +53,21 @@
   }
   ],
  
-  "featured_work": "FEATURED WORK",
-  "other_work": "OTHER WORK",
+  "featured_work": "featured work",
+  "other_work": "other work",
 
   "contact":{
-    "letsConnect": "LET'S CONNECT",
+    "letsConnect": "let's connect",
     "fullName": "FULL NAME",
     "email": "EMAIL",
     "subject": "SUBJECT",
     "message": "MESSAGE",
     "sendMessage": "SEND MESSAGE",
-    "connectWithMe": "CONNECT ME",
-    "availability": "AVAILABILITY",
-    "availableFreelance": "Available for freelance work",
-    "openFullTime": "Open to full-time opportunities",
-    "responseTime": "Response time: Within 24 hours",
+    "connectWithMe": "connect me",
+    "currentStatus": "current status",
+    "availableFreelance": "Ready to Bring Your Web Ideas to Life",
+    "openFullTime": "Open to Innovative and Impactful Web Projects",
+    "responseTime": "Fast Response – I’ll Get Back to You in a few hours",
     "placeholder": {
       "name": "Enter your name",
       "email": "Enter your email",

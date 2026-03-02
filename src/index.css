@@ -1,6 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap');
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Cyberpunk";
+  src: url("../fonts/ZiroxCyberpunkDemo-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Numeric";
+  src: url("../fonts/GOBAHtrial.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Digital";
+  src: url("../fonts/digital-7.italic.ttf");
+}
+
+@font-face {
+  font-family: "zirox-cyberpunk";
+  src: url("../fonts/ZiroxCyberpunkDemo-Regular.otf");
+}
+
+
 
 @theme {
   --color-primary: #00ffe7 ;
@@ -9,14 +30,27 @@
   --bg-dark: #0d0d1a;
   --color-dark: #0d0d1a;
   --color-gray: #e0e0e0;
-  --font-cyber: 'Orbitron', sans-serif;
+  --font-cyber: 'Cyberpunk', sans-serif;
+  --font-numeric: 'Numeric', sans-serif;
   --font-tech: 'Share Tech Mono', monospace;
+  --font-digital: 'Digital', monospace;
+  --font-zirox: 'zirox-cyberpunk', sans-serif;
+}
+
+* {
+  cursor: none !important;
+}
+
+
+body {
+  cursor: none;
 }
 
 .cyber-glitch {
   position: relative;
   color: #fff;
-
+  letter-spacing: 5px;
+  width: 700px;
 }
 
 .cyber-glitch::before,
@@ -33,26 +67,18 @@
 
 .cyber-glitch::before {
   color: #00ffe7;
-  text-shadow: -1px 0 1px #00ffe7;
+  text-shadow: -2px 0 1px #00ffe7;
   left: 2px;
   animation: glitch-anim-1 2s infinite linear alternate-reverse;
 }
 
 .cyber-glitch::after {
   color: #ff00ff;
-  text-shadow: 1px 0 1px #ff00ff;
+  text-shadow: 2px 0 1px #ff00ff;
   left: -2px;
   animation: glitch-anim-2 3s infinite linear alternate-reverse;
 }
 
-@keyframes glitch-anim-1 {
-  0%, 100% { transform: none; opacity: 0.8; }
-  41.99% { transform: none; opacity: 0.8; }
-  42% { transform: translate(-2px, 2px); opacity: 0.6; }
-  43% { transform: none; opacity: 0.8; }
-  45% { transform: translate(2px, -2px); opacity: 0.6; }
-  46% { transform: none; opacity: 0.8; }
-}
 
 @keyframes glitch-anim-2 {
   0%, 100% { transform: none; opacity: 0.8; }

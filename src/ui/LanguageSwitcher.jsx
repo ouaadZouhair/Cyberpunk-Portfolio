@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import AnimatedBtn from "../Components/AnimatedBtn";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -10,9 +11,11 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="absolute right-4 -bottom-4 top-1/2 -translate-y-1/2 flex hover:cursor-pointer">
-      <button  onClick={toggleLanguage} className="text-gray-900 w-10 h-10 p-0 m-0 bg-white font-medium text-lg duration-100 hover:bg-highlight hover:scale-105 hover:cursor-pointer">
+      <AnimatedBtn text={i18n.language === "fr" ? "EN" : "FR"} onClick={toggleLanguage} className="font-digital font-semibold text-gray-900 w-10 h-10 p-0 m-0 bg-white text-2xl duration-100 hover:bg-highlight hover:scale-105 hover:cursor-pointer" textColor="text-black" />
+      
+      {/* <button  onClick={toggleLanguage} className="font-digital font-semibold text-gray-900 w-10 h-10 p-0 m-0 bg-white text-2xl duration-100 hover:bg-highlight hover:scale-105 hover:cursor-pointer">
         {i18n.language === "fr" ? "EN" : "FR"}
-      </button>
+      </button> */}
     </div>
   );
 };      
