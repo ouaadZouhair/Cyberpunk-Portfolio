@@ -50,7 +50,7 @@ body {
   position: relative;
   color: #fff;
   letter-spacing: 5px;
-  width: 700px;
+  /* width: 700px; */
 }
 
 .cyber-glitch::before,

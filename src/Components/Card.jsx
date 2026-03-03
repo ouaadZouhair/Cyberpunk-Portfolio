@@ -28,7 +28,7 @@ const Card = ({ project, key }) => {
     <>
       <motion.div
         key={key}
-        className={`relative bg-black/30 backdrop-blur-lg border-[3px] overflow-hidden ${
+        className={`relative bg-black/30 backdrop-blur-lg border-4 overflow-hidden ${
           !project.featured
             ? "border-secondary/50 hover:border-secondary hover:shadow-secondary/40"
             : "border-highlight/50 hover:border-highlight hover:shadow-highlight/60"
@@ -37,7 +37,7 @@ const Card = ({ project, key }) => {
         whileHover="hover"
          onClick={() => setIsOpen(true)}
       >
-        <div className="relative h-auto overflow-hidden">
+        <div className="relative w-full h-[180px] md:h-auto  overflow-hidden">
           <motion.img
             src={project.image}
             alt={project.title}

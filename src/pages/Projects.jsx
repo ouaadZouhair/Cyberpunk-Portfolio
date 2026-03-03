@@ -94,17 +94,17 @@ const Projects = () => {
       githubLink: "https://github.com/ouaadZouhair/ZouhairOD",
       liveLink: "https://zouhairod.netlify.app/",
       featured: true
-    },
+    }
     
   ];
 
   return (
-    <section className="page min-h-screen text-gray-200 font-tech p-4 pt-9 md:p-9">
+    <section className="page min-h-screen text-gray-200 font-tech p-3 pt-9 md:p-9">
 
       {/* Featured Projects */}
-      <div className="max-w-6xl mx-auto mt-14 mb-7">
+      <div className="max-w-6xl mx-auto pt-14">
         {/* <h2 className="text-3xl font-cyber text-highlight mb-8 text-center">{t('featured_work')}</h2> */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 md:gap-6">
           {projects.filter(project => project.featured)
                 .map((project, index) => (
             <Card project={project} key={index} />

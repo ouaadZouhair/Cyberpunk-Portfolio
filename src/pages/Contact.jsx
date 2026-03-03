@@ -73,12 +73,12 @@ const Contact = () => {
   ];
 
   return (
-    <div className="page  text-gray-200 font-tech p-4 pt-9 md:p-9">
+    <div className="page min-h-screen text-gray-200 font-tech p-4 pt-9 md:p-9">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 mt-14 mb-7 gap-8">
               
         {/* Contact Form */}
         <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-highlight shadow-lg shadow-highlight/20 transition-all duration-500 hover:shadow-highlight/40">
-          <h2 className="text-3xl font-cyber text-highlight mb-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-cyber text-highlight mb-6 text-center">
             {t("contact.letsConnect")}
           </h2>
 
@@ -194,11 +194,11 @@ const Contact = () => {
         {/* Social & Availability */}
         <section className="space-y-8">
           <div className="bg-black/30 backdrop-blur-lg py-6 border-2 border-primary shadow-lg shadow-primary/20 transition-all duration-500 hover:shadow-primary/40">
-            <h2 className="text-3xl font-cyber text-primary mb-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-cyber text-primary mb-6 text-center">
               {t("contact.connectWithMe")}
             </h2>
             
-            <div className="flex justify-around mx-auto w-full items-center gap-2 md:gap-3">
+            <div className="flex justify-around flex-wrap md:flex-nowrap mx-auto w-full items-center gap-2 md:gap-3">
               {socialLinks.map((social, index) => {
                 const iconContent = (
                   <div
@@ -256,12 +256,12 @@ const Contact = () => {
           </div>
 
 
-          <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-secondary shadow-lg shadow-secondary/20 transition-all duration-500 hover:shadow-secondary/40 text-center">
-            <h2 className="text-3xl font-cyber text-secondary mb-6">
+          <section className="bg-black/30 backdrop-blur-lg p-2 md:p-6 border-2 border-secondary shadow-lg shadow-secondary/20 transition-all duration-500 hover:shadow-secondary/40 ">
+            <h2 className="text-2xl md:text-3xl font-cyber text-secondary mb-6 text-center">
               {t("contact.currentStatus")}
             </h2>
-            <div className="space-y-4 text-gray-300">
-              <p className="flex justify-center items-center gap-2">
+            <div className="space-y-4 text-gray-300 text-base md:text-xl">
+              <p className="flex justify-start items-center gap-2">
                 <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></span>
                 <span>{t("contact.availableFreelance")}</span>
               </p>

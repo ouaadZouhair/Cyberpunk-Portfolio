@@ -65,12 +65,12 @@ const AboutPage = () => {
   return (
     <div className="page min-h-screen text-gray-200 font-tech p-4 pt-9 md:p-9">
 
-      {/*  Description and GitHub Info */}
+
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mt-14 mb-7">
         {/* Developer Profile */}
         <div className="lg:col-span-2">
           <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-highlight shadow-lg shadow-highlight/20 h-full">
-            <h2 className="text-4xl w-full font-cyber  text-center text-highlight mb-4">
+            <h2 className="text-2xl md:text-4xl w-full font-cyber  text-center text-highlight mb-4">
               {t('about.title')}
             </h2>
             <div className="space-y-4 text-lg text-justify">
@@ -108,7 +108,7 @@ const AboutPage = () => {
 
       <div className="max-w-6xl mx-auto">
         <section className="bg-black/30 backdrop-blur-lg p-6 border-2 border-secondary shadow-lg shadow-secondary/20">
-          <h2 className="text-4xl font-cyber text-center text-secondary mb-6">
+          <h2 className="text-2xl md:text-4xl font-cyber text-center text-secondary mb-6">
             {t('skills')}
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
