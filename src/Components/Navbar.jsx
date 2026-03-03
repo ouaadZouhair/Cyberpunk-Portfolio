@@ -12,11 +12,11 @@ const Navbar = ({ pageIndex, pageNames, pagesLength, handlePrev, handleNext }) =
             disabled={pageIndex === 0}
             className="group flex items-center gap-2 bg-white border-2 border-transparent text-black backdrop-blur-sm transition-all duration-300 ease-out hover:scale-105 hover:bg-highlight disabled:hover:bg-white disabled:hover:scale-100 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <MdOutlineKeyboardArrowLeft size={40} />
+            <MdOutlineKeyboardArrowLeft size={38} />
           </button>
 
           <div className="flex gap-2 px-3 mx-auto rounded-full">
-            <h1 className="text-3xl font-digital md:text-4xl text-center font-semibold bg-transparent p-2 text-white border-2shadow-lg shadow-primary/40">
+            <h1 className="text-3xl font-digital md:text-4xl text-center font-semibold bg-transparent p-2 text-white text-shadow-lg text-shadow-highlight/30">
              <ScrambleText text={pageNames[pageIndex].toUpperCase()} className="text-white" />
             </h1>
           </div>
@@ -26,7 +26,7 @@ const Navbar = ({ pageIndex, pageNames, pagesLength, handlePrev, handleNext }) =
             disabled={pageIndex === pagesLength - 1}
             className="group flex items-center gap-2 bg-white border-2 border-transparent text-black backdrop-blur-sm transition-all duration-300 ease-out hover:scale-105 hover:bg-highlight disabled:hover:bg-white disabled:hover:scale-100 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <MdOutlineKeyboardArrowRight size={40} />
+            <MdOutlineKeyboardArrowRight size={38} />
           </button>
         </div>
 

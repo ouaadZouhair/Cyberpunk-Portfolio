@@ -53,6 +53,7 @@ function CustomCursor() {
       ref={cursorRef}
       src={cursorSrc}
       alt="cursor"
+      className="opacity-0 lg:opacity-100"
       style={{
         position: "fixed",
         pointerEvents: "none",

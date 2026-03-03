@@ -45,7 +45,7 @@ const Hero = () => {
 
 
     return (
-        <section className='page min-h-screen flex items-center relative overflow-hidden'>
+        <section className='page py-8 md:py-0 flex items-center relative overflow-hidden'>
 
             <div className="container mx-auto z-0 pt-16">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full lg:w-11/12 mx-auto">
@@ -55,7 +55,7 @@ const Hero = () => {
                                 <p className="text-primary text-lg mb-2 font-tech">
                                     <span className="inline-block">&lt;</span>{t('hero.hello')}<span className="inline-block animate-neon-flicker">/&gt;</span>
                                 </p>
-                                <h1 className="cyber-glitch w-full text text-2xl  md:text-5xl lg:text-5xl font-cyber font-bold tracking-tighter my-3 md:my-6" data-text={t('hero.title')}>
+                                <h1 className="cyber-glitch w-full text text-xl  md:text-5xl lg:text-5xl font-cyber font-bold tracking-tighter my-3 md:my-6" data-text={t('hero.title')}>
                                     {t('hero.title')}
                                 </h1>
                                 <h2 className="text-xl sm:text-2xl text-gray/80">
@@ -63,9 +63,8 @@ const Hero = () => {
                                 </h2>
                             </div>
 
-                            <p className="text-gray/80 w-full md:max-w-xl md:text-lg border-l-2 font-tech border-primary/50 pl-4 py-2">
+                            <p className="text-gray/80 w-full md:max-w-xl md:text-lg border-l-2 font-tech border-primary pl-4 py-2">
                                 {t('hero.description')}
-                            
                             </p>
 
                             <div className="flex flex-col md:flex-row gap-2 md:gap-4 pt-1.5 md:pt-4">
