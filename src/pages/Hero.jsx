@@ -55,9 +55,15 @@ const Hero = () => {
                                 <p className="text-primary text-lg mb-2 font-tech">
                                     <span className="inline-block">&lt;</span>{t('hero.hello')}<span className="inline-block animate-neon-flicker">/&gt;</span>
                                 </p>
-                                <h1 className="cyber-glitch w-full text text-xl  md:text-5xl lg:text-5xl font-cyber font-bold tracking-tighter my-3 md:my-6" data-text={t('hero.title')}>
+                                {/* <h1 className="cyber-glitch w-full text text-xl  md:text-5xl lg:text-5xl font-cyber font-bold tracking-tighter my-3 md:my-6" data-text={t('hero.title')}>
                                     {t('hero.title')}
-                                </h1>
+                                </h1> */}
+
+                                <div className="content">
+                                    <h2 className="text text-3xl  md:text-6xl lg:text-6xl font-bold tracking-tighter my-3 md:my-6" data-text={t('hero.title')}>
+                                        {t('hero.title')}
+                                    </h2>
+                                </div>
                                 <h2 className="text-xl sm:text-2xl text-gray/80">
                                     <span className="text-primary">{t('hero.subtitle.design')}</span> • <span className="text-secondary">{t('hero.subtitle.code')}</span> • <span className="text-highlight">{t('hero.subtitle.level')}</span>
                                 </h2>

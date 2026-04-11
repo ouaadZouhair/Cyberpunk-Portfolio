@@ -206,7 +206,7 @@ const Contact = () => {
                               transition-all duration-300 hover:scale-105"
                   >
                     {social.icon}
-                    <span className="mt-2 text-lg font-tech">{social.name}</span>
+                    {/* <span className="mt-2 text-lg font-tech">{social.name}</span> */}
 
                     {/* Tooltip (Desktop only) */}
                     {!isMobileOrTablet && (
@@ -260,7 +260,7 @@ const Contact = () => {
             <h2 className="text-2xl md:text-3xl font-cyber text-secondary mb-6 text-center">
               {t("contact.currentStatus")}
             </h2>
-            <div className="space-y-4 text-gray-300 text-base md:text-lg">
+            <div className="space-y-4 text-gray-300 text-base text-center md:text-md">
               <p className="flex justify-center items-center gap-3">
                 <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></span>
                 <span>{t("contact.availableFreelance")}</span>
