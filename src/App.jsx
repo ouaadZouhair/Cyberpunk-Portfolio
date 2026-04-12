@@ -92,7 +92,7 @@ function MainLayout({ pageNames, paths }) {
 
   return (
     <>
-      <GlitchTransition isActive={isGlitching} />
+      {/* <GlitchTransition isActive={isGlitching} /> */}
       <CustomCursor />
       <Navbar
         pageIndex={currentIndex}
