@@ -83,7 +83,7 @@ const Hero = () => {
 
                     <div className="order-1 w-full lg:order-2">                        
                             <img
-                            src="/zouhairRobot.png"
+                            src="/zouhairRobot.webp"
                             alt="Glitched Avatar"
                             loading="lazy"
                             className="w-auto h-[400px] mx-auto md:w-auto md:h-[600px]"

@@ -1,5 +1,4 @@
 import { motion, AnimatePresence } from "framer-motion";
-import React from "react";
 
 const glitchVariants = {
   initial: { opacity: 0 },
@@ -26,15 +25,17 @@ export default function GlitchTransition({ isActive }) {
           exit="exit"
         >
           {/* Dark base layer (lower opacity) */}
-          <div className="absolute inset-0 bg-black/40 mix-blend-overlay animate-glitch"></div>
+          <div className="absolute inset-0 bg-white/30 mix-blend-overlay animate-glitch"></div>
 
           {/* Layer 2 - Soft magenta */}
-          <div className="absolute inset-0 bg-pink-500/25 mix-blend-screen animate-glitch2"></div>
+          <div className="absolute inset-0 bg-pink-500/20 mix-blend-screen animate-glitch2"></div>
 
           {/* Layer 3 - Soft blue */}
-          <div className="absolute inset-0 bg-blue-500/15 mix-blend-screen animate-glitch3"></div>
+          <div className="absolute inset-0 bg-blue-500/10 mix-blend-screen animate-glitch3"></div>
         </motion.div>
+
       )}
     </AnimatePresence>
   );
 }
+
