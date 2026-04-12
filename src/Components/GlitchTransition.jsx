@@ -18,7 +18,7 @@ export default function GlitchTransition({ isActive }) {
     <AnimatePresence>
       {isActive && (
         <motion.div
-          className="fixed top-0 left-0 w-full h-full z-[10] pointer-events-none overflow-hidden"
+          className="fixed bottom-0 left-0 w-full h-full z-[10] pointer-events-none overflow-hidden"
           variants={glitchVariants}
           initial="initial"
           animate="animate"
