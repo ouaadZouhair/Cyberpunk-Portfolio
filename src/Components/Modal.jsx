@@ -56,26 +56,21 @@ export default function Modal({ isOpen, onClose, project }) {
               />
 
             {/* Modal content */}
-            <div className="font-tech p-6">
+            <div className="font-tech py-3 px-6">
              
 
               <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
 
-              <p className="text-gray-700 dark:text-gray-300 mb-3 text-justify">
+              <p className="text-gray-700 dark:text-gray-300 mb-2 text-sm text-justify">
                 {project.description}
               </p>
 
               {/* Technologies */}
-              <div className="flex flex-wrap gap-2 mt-3 mb-5">
+              <div className="flex flex-wrap gap-2 my-3">
                 {project.technologies?.map((tech, i) => (
                   <span
                     key={i}
-                    className={`${
-                      project.featured
-                        ? "bg-highlight/20 text-highlight"
-                        : "bg-secondary/20 text-secondary"
-                    } px-3 py-1 rounded-md text-sm`}
-                  >
+                    className={`bg-highlight/20 text-highlight p-2 rounded-md text-xs`}>
                     {tech}
                   </span>
                 ))}
@@ -89,9 +84,9 @@ export default function Modal({ isOpen, onClose, project }) {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-white text-black hover:bg-white/80`}
+                    className={`flex items-center gap-2 p-2 rounded-lg text-sm font-medium transition-colors bg-white text-black hover:bg-white/80`}
                   >
-                    <FaGithub className="text-lg" /> GitHub
+                    <FaGithub className="text-sm" /> GitHub
                   </a>
                 )}
 
@@ -101,9 +96,9 @@ export default function Modal({ isOpen, onClose, project }) {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-white text-black hover:bg-white/80`}
+                    className={`flex items-center gap-2 p-2 rounded-lg text-sm font-medium transition-colors bg-white text-black hover:bg-white/80`}
                   >
-                    <FaExternalLinkAlt className="text-lg" /> Demo
+                    <FaExternalLinkAlt className="text-sm" /> Demo
                   </a>
                 )}
               </div>

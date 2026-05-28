@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaPhone, FaEnvelope, FaInstagram } from 'react-icons/fa';
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 import AnimatedBtn from "../Components/AnimatedBtn";
 
 const Contact = () => {
   const [email, setEmail] = useState('');
-  const [step, setStep] = useState(1); 
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -38,39 +38,47 @@ const Contact = () => {
     if (e.target.name === "email") setEmail(e.target.value);
   };
 
-
   const socialLinks = [
     {
       name: 'LinkedIn',
-      icon: <FaLinkedin className="text-2xl" />,
+      icon: <FaLinkedin className="text-2xl xl:text-3xl" />,
       info: 'Mohammed Zouhir Ouaâd',
       color: 'bg-blue-500/90 text-white',
+      link: "https://www.linkedin.com/in/ouaadzouhair",
     },
     {
       name: 'Instagram',
-      icon: <FaInstagram  className="text-2xl" />,
+      icon: <FaInstagram className="text-2xl xl:text-3xl" />,
       info: 'zouhairouaad1',
       color: 'bg-fuchsia-600/90 text-white',
+      link: "https://instagram.com/zouhairouaad1",
     },
     {
       name: 'GitHub',
-      icon: <FaGithub className="text-2xl" />,
+      icon: <FaGithub className="text-2xl xl:text-3xl" />,
       info: 'github.com/ouaadzouhair',
-      color: 'bg-gray-300 text-black'
+      color: 'bg-gray-300 text-black',
+      link: "https://github.com/ouaadzouhair",
     },
     {
       name: 'Phone',
-      icon: <FaPhone className="text-2xl" />,
+      icon: <FaPhone className="text-2xl xl:text-3xl" />,
       info: '+212763835972',
-      color: 'bg-green-500 text-white'
+      color: 'bg-green-500 text-white',
+      link: "tel:+212763835972",
     },
     {
       name: 'Email',
-      icon: <FaEnvelope className="text-2xl" />,
+      icon: <FaEnvelope className="text-2xl xl:text-3xl" />,
       info: 'ouaadzouhair11@gmail.com',
-      color: 'bg-red-500 text-white'
-    }
+      color: 'bg-red-500 text-white',
+      link: "mailto:ouaadzouhair11@gmail.com",
+    },
   ];
+
+  const inputClass = `w-full bg-black/30 border border-highlight/40 p-3 xl:p-4 text-gray-200
+    focus:border-highlight focus:ring-1 focus:ring-highlight outline-none
+    transition-all duration-300 font-tech text-sm xl:text-base placeholder:text-gray-500`;
 
   return (
     <div className="page min-h-screen text-gray-200 font-tech p-4 pt-9 md:p-9">
@@ -242,7 +250,6 @@ const Contact = () => {
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block"
                     >
                       {iconContent}
                     </a>
