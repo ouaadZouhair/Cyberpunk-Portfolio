@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaReact, FaNodeJs, FaDocker } from 'react-icons/fa';
 import { SiJavascript, SiTailwindcss, SiMongodb, SiGit, SiPhp, SiExpress, SiWordpress, SiBootstrap, SiCanva , SiTypescript} from 'react-icons/si';
@@ -9,9 +9,18 @@ import axios from 'axios';
 const AboutPage = () => {
   const [githubData, setGithubData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isAvatarLoaded, setIsAvatarLoaded] = useState(false);
+  const avatarRef = useRef(null);
   const { t } = useTranslation();
 
   const githubUsername = 'ouaadZouhair';
+
+  // Cached images may finish loading before React attaches onLoad.
+  useEffect(() => {
+    if (avatarRef.current?.complete) {
+      setIsAvatarLoaded(true);
+    }
+  }, []);
 
   useEffect(() => {
     const fetchGitHubData = async () => {
@@ -93,11 +102,21 @@ const AboutPage = () => {
 
        
         <div className="hidden lg:block space-y-8 lg:grid-cols-1">
-            <div className="relative group">
+            <div className="relative group border-2 border-white shadow-white/50 overflow-hidden">
+              {!isAvatarLoaded && (
+                <div className="absolute inset-0 bg-white/5 overflow-hidden">
+                  <div className="absolute inset-0 -translate-x-full animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                </div>
+              )}
               <img
+                ref={avatarRef}
                 src="/zouhair_picture.webp"
                 alt="Mohammed Zouhair Ouaad avatar"
-                className="w-full h-auto object-cover border-2 border-white shadow-white/50 transition-transform duration-500"
+                loading="lazy"
+                onLoad={() => setIsAvatarLoaded(true)}
+                className={`w-full object-cover transition-opacity duration-500 ${
+                  isAvatarLoaded ? "h-auto opacity-100" : "h-[400px] opacity-0"
+                }`}
               />
             </div>
         </div>
