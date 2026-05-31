@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
@@ -23,6 +23,15 @@ const Card = ({ project, key }) => {
   const { t } = useTranslation();
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const imgRef = useRef(null);
+
+  // Cached images may finish loading before React attaches onLoad.
+  useEffect(() => {
+    if (imgRef.current?.complete) {
+      setIsLoaded(true);
+    }
+  }, []);
 
   return (
     <>
@@ -37,16 +46,32 @@ const Card = ({ project, key }) => {
         whileHover="hover"
          onClick={() => setIsOpen(true)}
       >
-        <div className="relative w-full h-[180px] md:h-auto  overflow-hidden">
+        <div
+          className={`relative w-full overflow-hidden ${
+            isLoaded ? "h-[180px] md:h-auto" : "h-[180px] md:h-[260px]"
+          }`}
+        >
+          {!isLoaded && (
+            <div className="absolute inset-0 bg-white/5 overflow-hidden">
+              <div
+                className={`absolute inset-0 -translate-x-full animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent ${
+                  project.featured ? "via-highlight/10" : "via-secondary/10"
+                } to-transparent`}
+              />
+            </div>
+          )}
+
           <motion.img
+            ref={imgRef}
             src={project.image}
             alt={project.title}
             loading="lazy"
-            className="w-full h-full object-cover object-center"
+            onLoad={() => setIsLoaded(true)}
+            className={`w-full h-full object-cover object-center transition-opacity duration-500 ${
+              isLoaded ? "opacity-100" : "opacity-0"
+            }`}
             variants={imageVariants}
           />
-
-         
         </div>
       </motion.div>
 
